@@ -1,7 +1,6 @@
 import "NonFungibleToken"
 import "MetadataViews"
 import "FungibleToken"
-import "FlowToken"
 import "ViewResolver"
 
 access(all) contract PuffPalz: NonFungibleToken {
@@ -110,17 +109,17 @@ access(all) contract PuffPalz: NonFungibleToken {
                 case Type<MetadataViews.Royalties>():
                     return MetadataViews.Royalties([
 						MetadataViews.Royalty(
-							receiver: getAccount(0xc4b1f4387748f389).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenREceiver),
+							receiver: getAccount(0xc4b1f4387748f389).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenReceiver),
 							cut: 0.01,
 							description: "1% Royalty for artist"
 						),
 						MetadataViews.Royalty(
-							receiver: getAccount(0x66b60643244a7738).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenREceiver),
+							receiver: getAccount(0x66b60643244a7738).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenReceiver),
 							cut: 0.01,
 							description: "1% Royalty for dev"
 						),
 						MetadataViews.Royalty(
-							receiver: getAccount(0xded455fa967d350e).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenREceiver),
+							receiver: getAccount(0xded455fa967d350e).capabilities.get<&{FungibleToken.Receiver}>(/public/flowTokenReceiver),
 							cut: 0.03,
 							description: "3% Royalty for treasury"
 						)

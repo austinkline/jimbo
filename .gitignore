@@ -1,5 +1,6 @@
 # flow
 emulator-account.pkey
 imports
+*.pkey
 
 node_modules
