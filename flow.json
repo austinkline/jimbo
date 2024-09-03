@@ -26,6 +26,14 @@
         "type": "file",
         "location": "emulator-account.pkey"
       }
+    },
+    "mainnet-account": {
+      "address": "0xa3eb9784ae7dc9c8",
+      "key": {
+        "index": 1,
+        "type": "file",
+        "location": "mainnet-account.pkey"
+      }
     }
   },
   "contracts": {
@@ -77,6 +85,14 @@
         "testnet": "0x7e60df042a9c0868",
         "mainnet": "0x1654653399040a61"
       }
+    },
+    "Burner": {
+      "source": "./node_modules/@flowtyio/flow-contracts/contracts/Burner.cdc",
+      "aliases": {
+        "emulator": "0xf8d6e0586b0a20c7",
+        "testnet": "0x9a0766d93b6608b7",
+        "mainnet": "0xf233dcee88fe0abe"
+      }
     }
   },
   "deployments": {
@@ -85,7 +101,8 @@
         "ViewResolver",
         "NonFungibleToken",
         "MetadataViews",
-        "PuffPalz"
+        "PuffPalz",
+        "Burner"
       ],
       "emulator-ft": [
         "FungibleToken",
@@ -93,6 +110,11 @@
       ],
       "emulator-flowtoken": [
         "FlowToken"
+      ]
+    },
+    "mainnet": {
+      "mainnet-account": [
+        "PuffPalz"
       ]
     }
   }
